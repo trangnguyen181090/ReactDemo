@@ -72,6 +72,7 @@ class Form extends React.Component{
             axios.get(_url)
             .then(resp => {
                 me.props.onSubmit(resp.data);
+                me.setState({userName: ''});
             });
         }
     }
