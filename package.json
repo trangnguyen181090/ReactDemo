@@ -1,0 +1,19 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "React learning",
+  "main": "1",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "webpack-dev-server --hot"
+  },
+  "author": "Trang Nguyen",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}
