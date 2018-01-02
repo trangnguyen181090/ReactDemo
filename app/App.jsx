@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import Game from './Game.jsx';
 
-console.log('>>> Game:', Game);
 // class for header
 class Header extends React.Component{
     render(){
@@ -89,7 +88,6 @@ class ShopCart extends React.Component{
         };
 
         this.addNewCard = (cardInfo) => {
-            console.log('>>>> cardInfo', cardInfo);
             this.setState(prevState => ({
                 cards: prevState.cards.concat(cardInfo)
             }));

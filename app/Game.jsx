@@ -37,7 +37,7 @@ const Stars = (props) => {
 
 const Button = (props) => {
     let button;
-    console.log('>>> props.answerIsCorrect',props.answerIsCorrect);
+
     switch(props.answerIsCorrect){
         case true:
             button = 
@@ -159,8 +159,6 @@ class Game extends React.Component{
         };
 
         this.checkAnswer = () => {
-            //console.log('>>> random', prevState.randomNumberStars);
-            //console.log('>>> select number',prevState.selectedNumbers.reduce((acc,n) => acc + n, 0));
             this.setState(prevState => ({
                 answerIsCorrect: prevState.numberOfStars === prevState.selectedNumbers.reduce((acc,n) => acc + n, 0)
             }));
