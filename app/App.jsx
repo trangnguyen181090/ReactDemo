@@ -1,20 +1,9 @@
 'use strict';
 import React from 'react';
 import axios from 'axios';
+import Game from './Game.jsx';
 
-class App extends React.Component {
-   render() {
-      return (
-         <div>
-            <Header/>
-            <Content/>
-            <ShopCart/>
-         </div>
-         
-      );
-   }
-}
-
+console.log('>>> Game:', Game);
 // class for header
 class Header extends React.Component{
     render(){
@@ -108,15 +97,32 @@ class ShopCart extends React.Component{
     }
     render(){
         return(
-            <div>
+            <div className="col-12">
                 <h2>Shopping Cart</h2>
                 <div>
                     <Form onSubmit={this.addNewCard}/>
                     <CardList cards={this.state.cards}/>
+                    <br/>
+                    
+
                 </div>
             </div>
         )
     }
 }
+
+class App extends React.Component {
+    render() {
+       return (
+          <div className="container">
+             {/* <Header/> */}
+             {/* <Content/> */}
+             <ShopCart/>
+             <Game/>
+          </div>
+          
+       );
+    }
+ }
 
 export default App;
